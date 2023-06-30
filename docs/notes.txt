@@ -1,0 +1,30 @@
+Source:
+https://www.raygesualdo.com/posts/building-a-macos-locked-status-notifier-in-swift
+
+https://github.com/raygesualdo/amiunlocked/tree/v1.0.0/program#installation
+---------------------------------------------------------------------------------------------------
+To create the project:
+    swift package init --type executable --name LockStateObserver
+To compile for production:
+    swift build -c release
+To execute:
+    .build/arm64-apple-macosx/release/LockStateObserver
+---------------------------------------------------------------------------------------------------
+Where to store? Firestore REST API
+https://firebase.google.com/docs/firestore/use-rest-api
+
+https://firestore.googleapis.com/v1/projects/YOUR_PROJECT_ID/databases/(default)/documents/cities/LA
+
+https://cloud.google.com/firestore/docs/reference/rest/v1beta1/projects.databases.documents/createDocument
+
+Creates a new document:
+
+    POST https://firestore.googleapis.com/v1/projects/{project_id}/databases/{databaseId}/documents/{collectionId}
+
+    The request body contains an instance of Document.
+    If successful, the response body contains an instance of Document.
+---------------------------------------------------------------------------------------------------
+To run as a daemon, use launchd
+https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html
+As one of the last steps will run the plists at ~/Library/LaunchAgents,
+so copy plist there (and make sure binary is in the correct place)
