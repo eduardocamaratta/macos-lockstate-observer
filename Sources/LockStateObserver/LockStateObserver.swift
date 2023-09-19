@@ -5,7 +5,7 @@ import Foundation
 public struct LockStateObserver {
     public static func main() {
         configureNotificationObserver()
-        Logger.write(logMessage: "started")
+        Logger.write("started")
         RunLoop.main.run()
     }
 

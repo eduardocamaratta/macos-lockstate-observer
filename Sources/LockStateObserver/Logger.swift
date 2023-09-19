@@ -6,7 +6,7 @@ public struct Logger {
     private static let logFileName = "log.txt"
     private static let logFolderName = ".lockStateObserver"
 
-    static func write(logMessage: String, date: Date? = Date()) {
+    static func write(_ logMessage: String, date: Date? = Date()) {
         guard let data = formatData(logMessage: logMessage, date: date) else {
             NSLog("Error encoding data")
             return
@@ -23,7 +23,7 @@ public struct Logger {
     }
 
     static func logNotification(_ notification: Notification) {
-        write(logMessage: notification.name.rawValue)
+        write(notification.name.rawValue)
     }
 
     // MARK: - Private
