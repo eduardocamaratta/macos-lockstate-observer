@@ -26,6 +26,10 @@ public struct Logger {
         write(notification.name.rawValue)
     }
 
+    static func logSignal(_ signal: Int32) {
+        write("Signal \(signal.signalDescription) received")
+    }
+
     // MARK: - Private
 
     private static func formatData(logMessage: String, date: Date?) -> Data? {
