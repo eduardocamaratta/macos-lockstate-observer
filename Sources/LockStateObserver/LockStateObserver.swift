@@ -4,12 +4,24 @@ import Foundation
 @main
 public struct LockStateObserver {
     public static func main() {
+        Logger.write("process started")
         configureNotificationObserver()
-        Logger.write("started")
+        configureSignalHandlers()
         RunLoop.main.run()
     }
 
     // MARK: - Private
+
+    private static func configureSignalHandlers() {
+        [SIGINT, SIGTERM, SIGKILL].forEach {
+            signal($0) {
+                Logger.logSignal($0)
+                if [SIGTERM, SIGINT].contains($0) {
+                    exit(0)
+                }
+            }
+        }
+    }
 
     private static func configureNotificationObserver() {
         let dnc = DistributedNotificationCenter.default()
@@ -26,6 +38,7 @@ public struct LockStateObserver {
 
         let workspaceNotifications: [NSNotification.Name] = [
             NSWorkspace.willPowerOffNotification,
+            NSWorkspace.willSleepNotification,
             NSWorkspace.screensDidWakeNotification,
             NSWorkspace.screensDidSleepNotification
         ]

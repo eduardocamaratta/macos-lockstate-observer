@@ -7,4 +7,8 @@ extension String {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
         return "\(dateFormatter.string(from: date)): \(self)\n"
     }
+
+    var prefixSpaceIfNotEmpty: String {
+        isEmpty ? "" : " \(self)"
+    }
 }
