@@ -5,7 +5,7 @@
     <key>Label</key>
     <string>com.eduardocamaratta.lockstateobserver</string>
     <key>Program</key>
-    <string>BINARY_PATH</string>
+    <string>$BINARY_ABSOLUTE_PATH</string>
 	<key>RunAtLoad</key>
 	<true/>
 </dict>
