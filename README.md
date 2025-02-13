@@ -15,7 +15,8 @@ swift build -c release
 
 ## Installation
 
-After compilation, copy the release binary from `.build/arm64-apple-macosx/release`. Make sure to also move the plist to the correct place. The process will start automatically with the macOS.
+1. After compilation, move the release binary from `.build/arm64-apple-macosx/release` to `~/Library/EduardoCamaratta/`.
+2. Replace the key `$BINARY_ABSOLUTE_PATH` on `plists/com.eduardocamaratta.lockstateobserver.plist` with the absolute path for the binary you moved on the previous step. Move the edited plist to `~/Library/LaunchAgents`.
 
 ## Accessing recorded data
 
@@ -23,4 +24,6 @@ The type of event and exact time it happened are recorded to a text file called 
 
 ## Planned Improvements
 
-Although there are no planned dates, idea is to add the possibility to send the recorded data to some of the databases available in Firebase, via REST API.
+* Installation script
+* Express server to be able to access the data locally on webpages, temporarily while it's not sending to Firestore.
+* Add possibility to send recorded data to Firestore via REST API
