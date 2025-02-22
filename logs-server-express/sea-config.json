@@ -1,0 +1,4 @@
+{
+    "main": "server-bundled.cjs",
+    "output": "sea-prep.blob"
+}

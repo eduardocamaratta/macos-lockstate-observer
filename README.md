@@ -24,6 +24,6 @@ The type of event and exact time it happened are recorded to a text file called 
 
 ## Planned Improvements
 
-* Installation script
-* Express server to be able to access the data locally on webpages, temporarily while it's not sending to Firestore.
-* Add possibility to send recorded data to Firestore via REST API
+* Installation script.
+* Express server to be able to access the data locally on webpages, temporarily while it's not sending data to the cloud.
+* Add possibility to send recorded data to Firestore via REST API.

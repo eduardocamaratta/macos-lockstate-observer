@@ -1,0 +1,4 @@
+// node or browser:
+fetch('http://127.0.0.1:7654/logs').then(response => response.text()).then(t => console.log(t))
+// on Brave: had to disable the Shields for the website, because the request is treated as tracker or ad by Brave.
+// Had to also add access-control-allow-origin header.
