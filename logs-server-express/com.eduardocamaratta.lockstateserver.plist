@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.eduardocamaratta.lockstateserver</string>
+    <key>Program</key>
+    <string>/Users/v4gy1m7/.nvm/versions/node/v22.11.0/bin/node</string>
+    <!-- start: no effect -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/v4gy1m7/.nvm/versions/node/v22.11.0/bin:/Users/v4gy1m7/.nvm/versions/node/v22.11.0/lib</string>
+    </dict>
+    <!-- end: no effect -->
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ProgramArguments</key>
+    <array>
+    <string>/Users/v4gy1m7/dev/MacOSLockStateObserver/logs-server/server.js</string>
+    <string>/Users/v4gy1m7/Documents/.lockStateObserver/log.txt</string>
+    </array>
+</dict>
+</plist>

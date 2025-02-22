@@ -1,0 +1,11 @@
+{
+  "name": "logs-server",
+  "version": "0.0.1",
+  "description": "A local server for the lock/unlock logs",
+  "main": "main.js",
+  "author": "Eduardo Camaratta",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
