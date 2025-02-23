@@ -47,5 +47,4 @@ fetch('http://127.0.0.1:7654/logs').then(response => response.text()).then(t => 
 ## Planned Improvements
 
 * Installation script.
-* Installation script for the logs-server.
 * Add possibility to send recorded data to Firestore via REST API.
