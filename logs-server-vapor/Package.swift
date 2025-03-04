@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "logs-server",
+    name: "LockStateLogsServer",
     platforms: [
         .macOS(.v13),
     ],
@@ -12,18 +12,9 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "logs-server",
+            name: "lock-state-logs-server",
             dependencies: [
                 .product(name: "Vapor", package: "vapor")
-            ],
-            path: "Sources/App",
-            swiftSettings: swiftSettings
-        ),
-        .testTarget(
-            name: "logs-server-tests",
-            dependencies: [
-                .target(name: "logs-server"),
-                .product(name: "VaporTesting", package: "vapor"),
             ],
             swiftSettings: swiftSettings
         )
@@ -31,7 +22,9 @@ let package = Package(
     swiftLanguageModes: [.v5]
 )
 
-var swiftSettings: [SwiftSetting] { [
-    .enableUpcomingFeature("DisableOutwardActorInference"),
-    .enableExperimentalFeature("StrictConcurrency")
-] }
+var swiftSettings: [SwiftSetting] {
+    [
+        .enableUpcomingFeature("DisableOutwardActorInference"),
+        .enableExperimentalFeature("StrictConcurrency")
+    ]
+}
