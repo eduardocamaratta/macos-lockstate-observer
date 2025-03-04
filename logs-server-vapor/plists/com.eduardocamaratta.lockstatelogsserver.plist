@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.eduardocamaratta.locklogsserver</string>
+    <string>com.eduardocamaratta.lockstatelogsserver</string>
     <key>Program</key>
     <string>$BINARY_ABSOLUTE_PATH</string>
 	<key>RunAtLoad</key>
