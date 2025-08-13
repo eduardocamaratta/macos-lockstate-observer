@@ -19,7 +19,7 @@ Use the provided installation script:
 ./install.sh
 ```
 
-The script will compile the project on release mode, copy the resulting binary to the destination, edit the plist and also move it to the proper place. The moment the plist is copied the launch agent will be configured as a background item and will start together with macOS. Therefore a reboot is needed so the process can start running and capturing data.
+The script will compile the project on release mode, copy the resulting binary to the destination, edit the plist and also move it to the proper place. The moment the plist is copied the launch agent will be configured as a background item and will start together with macOS. The script also manages to start the daemon immediately after the plist is copied.
 
 ## Accessing recorded data
 
