@@ -38,7 +38,7 @@ swift build -c release
 ### Installation
 
 1. Copy the binary `logs-server` from `.build/arm64-apple-macosx/release/` to `~/Library/EduardoCamaratta`.
-2. Replace the key `$BINARY_ABSOLUTE_PATH` on `plists/com.eduardocamaratta.locklogsserver.plist` with the absolute path for the binary you just moved. Move the plist to `~/Library/LaunchAgents`.
+2. Replace the key `$BINARY_ABSOLUTE_PATH` on `plists/com.eduardocamaratta.lockstatelogsserver.plist` with the absolute path for the binary you just moved. Move the plist to `~/Library/LaunchAgents`.
 
 ### Accesing data
 
